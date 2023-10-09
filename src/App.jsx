@@ -14,6 +14,10 @@ function App() {
     <BrowserRouter>
       <Menu></Menu>
       <div className="mainSection">
+
+
+
+        
         <Routes>
           {/* <Route path="/" element={<PagPrincipal></PagPrincipal>}></Route>
         <Route exact path="/detalleProducto/:id" element={<DetalleProducto></DetalleProducto>} ></Route>
