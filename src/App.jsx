@@ -16,16 +16,18 @@ function App() {
     <BrowserRouter>
       <Menu></Menu>
       <div className="mainSection">
-
-
-
         
         <Routes>
+
         <Route exact path="/administrador/*" element={
           <RutasProtegidas>
             <RutasAdministrador></RutasAdministrador>
           </RutasProtegidas>
         }></Route>
+        
+        {/*<Route path="/" element={<Login/>} />
+            < path="/Login" element={<Login/>}/>*/}
+
           {/* <Route path="/" element={<PagPrincipal></PagPrincipal>}></Route>
         <Route exact path="/detalleProducto/:id" element={<DetalleProducto></DetalleProducto>} ></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
