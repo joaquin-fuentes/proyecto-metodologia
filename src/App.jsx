@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/common/Footer";
 import RutasAdministrador from "./components/routes/RutasAdministrador";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
+import Login from "./components/views/Administrador/Login";
 
 
 
@@ -25,8 +26,11 @@ function App() {
           </RutasProtegidas>
         }></Route>
         
-        {/*<Route path="/" element={<Login/>} />
-            < path="/Login" element={<Login/>}/>*/}
+        <Route excat path="/login" element={<Login>
+
+        </Login>
+        }></Route>
+            
 
           {/* <Route path="/" element={<PagPrincipal></PagPrincipal>}></Route>
         <Route exact path="/detalleProducto/:id" element={<DetalleProducto></DetalleProducto>} ></Route>
