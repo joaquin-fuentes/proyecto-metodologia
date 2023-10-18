@@ -5,7 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/common/Footer";
 import RutasAdministrador from "./components/routes/RutasAdministrador";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
-
+import Contacto from "./components/views/Contacto";
+import Error404 from "./components/views/Error404";
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
             <RutasAdministrador></RutasAdministrador>
           </RutasProtegidas>
         }></Route>
-        
+          <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
         {/*<Route path="/" element={<Login/>} />
             < path="/Login" element={<Login/>}/>*/}
 
@@ -32,12 +33,16 @@ function App() {
         <Route exact path="/detalleProducto/:id" element={<DetalleProducto></DetalleProducto>} ></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
         <Route path="/AcercaDe" element={<SobreNosotros></SobreNosotros>}></Route> */}
+        <Route path="*" element={<Error404></Error404>}></Route>
         </Routes>
         {/* <Footer usuarioLogueado={usuarioLogueado}></Footer> */}
       </div>
+      
       <Footer></Footer>
+
     </BrowserRouter>
   );
 }
 
 export default App;
+
