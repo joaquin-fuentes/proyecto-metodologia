@@ -1,26 +1,35 @@
-/*import  Axios  from 'axios'
-import React, { useState } from 'react'
-import { Form } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
-import { useState } from "react"
-  
-  
+import React from 'react';
+ import icono_perfil from "../assets/person.png";
+ import icono_contraseña from "../assets/password.png";
+
 
 const Login = () => {
-  const [usuario, setUsuario] = useState("")
-  const [contraseña, setContraseña] = useState("")
+
   return (
-    <div>
+    
+    <div className='conteiner'>
+          <div className='header'>
+           <div className='txt'>Login</div>
+           <div className='linea'></div>
+          </div>
+          
+          <div className='inputs'>
+            <div className='input'>
+              <img src={icono_perfil} alt="" />
+              <input type="text" placeholder='Usuario'/>
+            </div>
 
-        <Form.Group className="mb-3 container">
-          <Form.Label>Usuario</Form.Label>
-          <Form.Control placeholder="Ingrese su usuario" onChange={(e) => setUsuario(e.target.value)}/>
-          <Form.Label>Contraseña</Form.Label>
-          <Form.Control placeholder="Ingrese su contraseña" onChange={(e) => setContraseña(e.target.value)}/>
-        </Form.Group>
+            <div className='input'>
+              <img src={icono_contraseña} alt="" />
+              <input type="password" placeholder='Contraseña'/>
+            </div>
 
+            <div className='submit'>Ingresar</div>
+            
+          </div>
     </div>
+    
   );
 };
 
-export default Login;*/
+export default Login;
