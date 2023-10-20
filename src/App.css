@@ -2,8 +2,137 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    /* background-image: url("../src/components/views/Assets/Nike-logo.webp"); */
+    background: linear-gradient(rgb(0, 153, 255), rgb(255, 0, 255))  ;
   }
   .mainSection{
     flex-grow: 1;
     overflow: hidden;
   }
+
+/* Contacto */
+
+.contac{
+  border: 1px solid white;
+  height: 100px;
+  background-color: white;
+}
+
+.contactoBody{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* img{
+  height: 600%;
+} */
+
+.contacto{
+  padding-top: 100px;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  /* justify-content: center; */
+  
+}
+
+@media (max-width: 1100px){
+
+  .col{
+      display: flex;
+      flex-direction: row;
+      height: 2300px;
+  }
+
+}
+
+/* CSS Del Login */
+
+.conteiner{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 100px;
+  background-color: white;
+  padding-bottom: 30px;  
+  width: 600px;
+  border-radius: 2%;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.txt{
+  color: purple;
+  font-size: 48px;
+  font-weight: 700;
+  font-style: oblique;
+}
+
+.linea{
+  width: 60px;
+  height: 6px;
+  background-color: purple;
+  border-radius: 9px;
+}
+
+.inputs{
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input{
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 480px;
+  height: 80px;
+  background: #eaeaea;
+  border-radius: 6px;
+}
+
+.input img{
+  margin: 30px;
+}
+
+.input input{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 19px;
+}
+
+.submit{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 59px;
+  color: white;
+  background: purple;
+  border-radius: 50px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+
+}
+
+
+
+
