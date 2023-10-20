@@ -7,6 +7,8 @@ import RutasAdministrador from "./components/routes/RutasAdministrador";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import Contacto from "./components/views/Contacto";
 import Error404 from "./components/views/Error404";
+import Login from "./components/views/Administrador/Login";
+
 
 
 function App() {
@@ -26,8 +28,14 @@ function App() {
           </RutasProtegidas>
         }></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
-        {/*<Route path="/" element={<Login/>} />
-            < path="/Login" element={<Login/>}/>*/}
+
+          <Route exact path="/login" element={
+          <Login>
+
+          </Login>}>
+            
+          </Route>
+        
 
           {/* <Route path="/" element={<PagPrincipal></PagPrincipal>}></Route>
         <Route exact path="/detalleProducto/:id" element={<DetalleProducto></DetalleProducto>} ></Route>
