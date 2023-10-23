@@ -9,6 +9,16 @@
       "talle": "L",
       "descripcion": "Remera deportiva color salmon, con tela \"aqui va el nombre de la tela\" ",
       "id": 2
+    },
+    {
+      "nombrePrenda": "Pantalon",
+      "precio": "7000",
+      "imagen": "https://umbroar.vtexassets.com/arquivos/ids/2292453-800-auto?v=638140588902700000&width=800&height=auto&aspect=true",
+      "categoria": "Pantalones Largos",
+      "color": "#0f0f0f",
+      "talle": "Lsd",
+      "descripcion": "Pantalon color negro, marca umbro, de algodon.",
+      "id": 3
     }
   ],
   "usuarios": [

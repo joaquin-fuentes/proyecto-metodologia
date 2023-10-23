@@ -116,6 +116,7 @@ const DetalleProducto = () => {
                         <option value="Remeras">Remeras</option>
                         <option value="Pantalones Cortos">Pantalones Cortos</option>
                         <option value="Pantalones Largos">Pantalones Largos</option>
+                        <option value="Conjuntos">Conjuntos</option>
                         <option value="Zapatillas">Zapatillas</option>
                         <option value="Accesorios">Accesorios</option>
                         <option value="Ropa interior">Ropa interior</option>
