@@ -8,6 +8,8 @@ import RutasProtegidas from "./components/routes/RutasProtegidas";
 import Contacto from "./components/views/Contacto";
 import Error404 from "./components/views/Error404";
 import Login from "./components/views/Administrador/Login";
+import DetalleProductoInicio from "./components/views/DetalleProductoInicio";
+
 
 
 
@@ -28,6 +30,7 @@ function App() {
           </RutasProtegidas>
         }></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
+          <Route exact path="/detalle" element={<DetalleProductoInicio></DetalleProductoInicio>}></Route>
 
           <Route exact path="/login" element={
           <Login>
