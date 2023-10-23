@@ -1,0 +1,31 @@
+{
+  "prendas": [
+    {
+      "nombrePrenda": "Remera ",
+      "precio": "7000",
+      "imagen": "https://www.newbalance.com.ar/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/r/e/remera-hombre-new-balancefast-flight-short-sleeve-mt11240cp1_nb_40_i_1.jpg",
+      "categoria": "Remeras",
+      "talle": "L",
+      "color": "red",
+      "descripcion": "Remera deportiva color salmon, con tela (nombre de tela)",
+      "id": 1
+    },
+    {
+      "nombrePrenda": "Remera",
+      "precio": "7000",
+      "imagen": "https://www.newbalance.com.ar/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/r/e/remera-hombre-new-balancefast-flight-short-sleeve-mt11240cp1_nb_40_i_1.jpg",
+      "categoria": "Remeras",
+      "color": "#af4b4b",
+      "talle": "L",
+      "descripcion": "Remera deportiva color salmon, con tela (nombre de tela)",
+      "id": 2
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreUsuario": "admin",
+      "password": "123456"
+    }
+  ]
+}
