@@ -51,6 +51,7 @@ const AdminProductos = () => {
             <th>Color</th>
             <th>Talle</th>
             <th>Categoria</th>
+            <th>Imagen</th>
             <th>Precio</th>
             <th>Opciones</th>
           </tr>

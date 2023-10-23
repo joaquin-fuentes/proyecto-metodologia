@@ -1,11 +1,13 @@
 import { Button, Form, Container } from "react-bootstrap"
 import { useForm } from "react-hook-form";
 import { consultaCrearProducto } from "../../helpers/queries";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 const CrearProducto = () => {
+
+    const navegacion = useNavigate()
 
     const {
         register,
@@ -22,8 +24,9 @@ const CrearProducto = () => {
             if(respuesta.status === 201){
                 Swal.fire(
                     'Agregado!',
-                    `El producto ${productoNuevo.nombreProducto} fue creado`,
-                    'success'
+                    `El producto ${productoNuevo.nombrePrenda} fue creado`,
+                    'success',
+                    navegacion("/administrador")
                 )
                 reset()
             } else{
@@ -62,7 +65,7 @@ const CrearProducto = () => {
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Precio*</Form.Label>
-                    <Form.Control type="number" placeholder="Ej:50" maxLength={5} min={0} max={10000} {
+                    <Form.Control type="number" placeholder="Ej:50" maxLength={6} min={0} max={200000} {
                         ...register('precio', {
                             required: 'El campo es obligatorio',
                             pattern: {
@@ -87,11 +90,12 @@ const CrearProducto = () => {
                             maxLength: {
                                 value: 250,
                                 message: "Este campo debe tener como maximo 250 caracteres"
-                            },
-                            pattern: {
-                                value: /.*\.(jpg|png|jpeg)$/,
-                                message: "La imagen debe estar en formaro .png o .jpg"
                             }
+                            // ,
+                            // pattern: {
+                            //     value: /.*\.(jpg|png|jpeg)$/,
+                            //     message: "La imagen debe estar en formaro .png o .jpg"
+                            // }
                         })
                     } />
                     <Form.Text className="text-danger">
@@ -108,6 +112,7 @@ const CrearProducto = () => {
                         <option value="Remeras">Remeras</option>
                         <option value="Pantalones Cortos">Pantalones Cortos</option>
                         <option value="Pantalones Largos">Pantalones Largos</option>
+                        <option value="Conjuntos">Conjuntos</option>
                         <option value="Zapatillas">Zapatillas</option>
                         <option value="Accesorios">Accesorios</option>
                         <option value="Ropa interior">Ropa interior</option>
