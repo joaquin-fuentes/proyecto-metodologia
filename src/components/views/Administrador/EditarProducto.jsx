@@ -181,7 +181,7 @@ const EditarProducto = () => {
 
                 </Form.Group>
                 <div className="d-flex justify-content-center">
-                  <Button type="submit" className="w-25 m-3">Guardar</Button>
+                  <Button type="submit" className="w-25 m-3">Editar</Button>
                   <Link to={"/administrador"} className="btn btn-danger w-25 m-3">
                     Volver
                   </Link>
