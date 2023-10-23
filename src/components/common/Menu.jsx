@@ -1,5 +1,6 @@
 import { Navbar, Container, Nav, Button, NavDropdown } from "react-bootstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import logo from "../../assets/imagenes/logoCatalogo.png";
 
 
 const Menu = () => {
@@ -9,7 +10,7 @@ const Menu = () => {
         <>
             <Navbar expand="lg" bg="dark" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="/">Imagen Perfil</Navbar.Brand>
+                    <Navbar.Brand href="/"><img src={logo} alt="Logo de la pagina" className="logoMenu"/></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav className="ms-auto">

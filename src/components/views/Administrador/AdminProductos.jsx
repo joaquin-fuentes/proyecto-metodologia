@@ -1,9 +1,26 @@
 import { Container, Table, Button, InputGroup, Form, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import { useEffect, useState } from 'react';
+import { obtenerProductos } from "../../helpers/queries";
 import Swal from "sweetalert2";
 
+import ItemProducto from "./ItemProducto"
+
 const AdminProductos = () => {
+
+  const [productos, setProductos] = useState([])
+
+  useEffect(()=>{
+    obtenerProductos().then((respuesta)=>{
+        if (respuesta != null){
+            setProductos(respuesta)
+        } else{
+            Swal.fire("Error", "No se pudo obtener los datos de la API", "error")
+            // navegacion("/error404")
+        }
+    })
+},[])
+
   return (
     <Container className="mainSection my-4">
       <h1 className="display-4 text-center">Administrador de Productos</h1>
@@ -39,66 +56,11 @@ const AdminProductos = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Remera Nike</td>
-            <td>Verde</td>
-            <td>L</td>
-            <td>Remeras</td>
-            <td>$5000</td>
-            <td>
-              <Link
-                className="btn btn-success mx-1"
-                to={`/administrador/detalle`}
-              > Ver detalle
-              </Link>
-              <Link
-                className="btn btn-warning mx-1"
-                to={`/administrador/editar`}
-              > Editar
-              </Link>
-              <Button className="mx-1" variant="danger">Eliminar</Button>
-            </td>
-          </tr>
-          <tr>
-            <td>Remera Nike</td>
-            <td>Verde</td>
-            <td>L</td>
-            <td>Remeras</td>
-            <td>$5000</td>
-            <td>
-              <Link
-                className="btn btn-success mx-1"
-                to={`/administrador/detalle`}
-              > Ver detalle
-              </Link>
-              <Link
-                className="btn btn-warning mx-1"
-                to={`/administrador/editar`}
-              >Editar
-              </Link>
-              <Button className="mx-1" variant="danger">Eliminar</Button>
-            </td>
-          </tr>
-          <tr>
-            <td>Remera Nike</td>
-            <td>Verde</td>
-            <td>L</td>
-            <td>Remeras</td>
-            <td>$5000</td>
-            <td>
-              <Link
-                className="btn btn-success mx-1"
-                to={`/administrador/detalle`}
-              > Ver detalle
-              </Link>
-              <Link
-                className="btn btn-warning mx-1"
-                to={`/administrador/editar`}
-              > Editar
-              </Link>
-              <Button className="mx-1" variant="danger">Eliminar</Button>
-            </td>
-          </tr>
+     {
+             productos.map((producto)=>{
+               return  <ItemProducto producto={producto} setProductos={setProductos} key={producto.id}></ItemProducto>
+             })
+     }
         </tbody>
       </Table>
     </Container>
