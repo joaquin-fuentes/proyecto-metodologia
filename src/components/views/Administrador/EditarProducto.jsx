@@ -95,11 +95,12 @@ const EditarProducto = () => {
                             maxLength: {
                                 value: 250,
                                 message: "Este campo debe tener como maximo 250 caracteres"
-                            },
-                            pattern: {
-                                value: /.*\.(jpg|png|jpeg)$/,
-                                message: "La imagen debe estar en formaro .png o .jpg"
                             }
+                            // ,
+                            // pattern: {
+                            //     value: /.*\.(jpg|png|jpeg)$/,
+                            //     message: "La imagen debe estar en formaro .png o .jpg"
+                            // }
                         })
                     } />
                     <Form.Text className="text-danger">
@@ -116,6 +117,7 @@ const EditarProducto = () => {
                         <option value="Remeras">Remeras</option>
                         <option value="Pantalones Cortos">Pantalones Cortos</option>
                         <option value="Pantalones Largos">Pantalones Largos</option>
+                        <option value="Conjuntos">Conjuntos</option>
                         <option value="Zapatillas">Zapatillas</option>
                         <option value="Accesorios">Accesorios</option>
                         <option value="Ropa interior">Ropa interior</option>

@@ -23,7 +23,7 @@ const ItemProducto = ({ producto, setProductos }) => {
                     if (respuesta.status === 200) {
                         Swal.fire(
                             'Eliminado!',
-                            `El producto ${producto.nombreProducto} fue eliminado`,
+                            `El producto ${producto.nombrePrenda} fue eliminado`,
                             'success'
                         )
                         //actualizar el sate producto del componente administrador
@@ -40,22 +40,23 @@ const ItemProducto = ({ producto, setProductos }) => {
     return (
         <tr>
             <td>{producto.nombrePrenda}</td>
-            <td>{producto.color}</td>
+            <td><div style={{ backgroundColor: producto.color, width: '100%', height: '30px' }}></div></td>
             <td>{producto.talle}</td>
             <td>{producto.categoria}</td>
+            <td><img src={producto.imagen} alt="imagen de prenda" className="imagenTablaAdministrador" /></td>
             <td>${producto.precio}</td>
             <td>
               <Link
-                className="btn btn-success mx-1"
+                className="btn btn-success m-1"
                 to={`/administrador/detalle/${producto.id}`}
               > Ver detalle
               </Link>
               <Link
-                className="btn btn-warning mx-1"
+                className="btn btn-warning m-1"
                 to={`/administrador/editar/${producto.id}`}
               > Editar
               </Link>
-              <Button className="mx-1" variant="danger" onClick={borrarProducto}>Eliminar</Button>
+              <Button className="m-1" variant="danger" onClick={borrarProducto}>Eliminar</Button>
             </td>
         </tr>
     );
