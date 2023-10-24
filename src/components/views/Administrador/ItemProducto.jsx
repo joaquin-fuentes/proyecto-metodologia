@@ -39,6 +39,7 @@ const ItemProducto = ({ producto, setProductos }) => {
 
     return (
         <tr>
+            <td>{producto.id}</td>
             <td>{producto.nombrePrenda}</td>
             <td><div style={{ backgroundColor: producto.color, width: '100%', height: '30px' }}></div></td>
             <td>{producto.talle}</td>

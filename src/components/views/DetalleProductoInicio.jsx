@@ -1,9 +1,28 @@
 import { Container, Row, Col, Breadcrumb, Button } from "react-bootstrap"
+import { useEffect, useState } from "react";
+import { obtenerProducto } from "../helpers/queries";
+import { useParams, useNavigate, Link } from "react-router-dom";
+
 import Swal from 'sweetalert2';
 
 const DetalleProductoInicio = () => {
 
-   
+    const { id } = useParams()
+
+    const [producto, setProducto] = useState([])
+    const [productoWp, setProductoWp] = useState("")
+
+    useEffect(() => {
+        obtenerProducto(id).then((respuesta) => {
+            if (respuesta != null) {
+                setProducto(respuesta)
+                setProductoWp(`${respuesta.nombrePrenda}, código: ${respuesta.id}`)
+            } else {
+                Swal.fire("Error", "No se pudo obtener los datos de la API", "error")
+                // navegacion("/error404")
+            }
+        })
+    }, [])
 
     return (
         <Container className='mainSection my-3'>
@@ -12,21 +31,28 @@ const DetalleProductoInicio = () => {
             <hr />
             <Row className="m-4">
                 <Col xs={12} lg={6} className="text-center " >
-                    <img src="https://www.newbalance.com.ar/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/r/e/remera-hombre-new-balancefast-flight-short-sleeve-mt11240cp1_nb_40_i_1.jpg" alt="imagen de milanesa con pure" className="w-100" />
+                    <img src={producto.imagen} alt="imagen de prenda" className="w-100" />
                 </Col>
                 <Col xs={12} lg={6} >
                     <article className="p-2 py-md-0">
-                        <h3>Remera New Balance</h3>
+                        <h3>{producto.nombrePrenda}</h3>
                         <hr />
-                        <p className="fw-bold ">Categoria: <span className="fw-normal"> Remeras</span></p>
-                        <p className="fw-bold ">Talle: <span className="fw-normal"> L</span></p>
-                        <p className="fw-bold ">Descripcion: <span className="fw-normal"> Remera deportiva color salmon, con tela (nombre de tela)</span></p>
-                        <p className="fw-bold">Precio: <span className="fw-normal">$7000</span></p>
+                        <p className="fw-bold ">Categoria: <span className="fw-normal">{producto.categoria}</span></p>
+                        <p className="fw-bold ">Talle: <span className="fw-normal">{producto.talle}</span></p>
+                        <p className="fw-bold ">Descripcion: <span className="fw-normal">{producto.descripcion}</span></p>
+                        <p className="fw-bold">Color: <span className="fw-normal p-1" style={{ backgroundColor: producto.color}}>{producto.color}</span></p>  
+                        <p className="fw-bold">Precio: <span className="fw-normal">${producto.precio}</span></p>
+                        <Link className="btn btn-primary"
+                            target="_blank"
+                            to={`https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! Estoy interesado en tu producto:${productoWp}`}>
+                            Ir al WP
+                        </Link>
                     </article>
+
                 </Col>
             </Row>
             <Breadcrumb>
-            <a href="/" className='volver-atras'>Volver</a>
+                <a href="/" className='volver-atras'>Volver</a>
             </Breadcrumb>
         </Container>
     );
