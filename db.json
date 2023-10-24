@@ -1,0 +1,41 @@
+{
+  "prendas": [
+    {
+      "nombrePrenda": "Remera",
+      "precio": "7000",
+      "imagen": "https://www.newbalance.com.ar/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/r/e/remera-hombre-new-balancefast-flight-short-sleeve-mt11240cp1_nb_40_i_1.jpg",
+      "categoria": "Remeras",
+      "color": "#af4b4b",
+      "talle": "L",
+      "descripcion": "Remera deportiva color salmon, con tela \"aqui va el nombre de la tela\" ",
+      "id": 2
+    },
+    {
+      "nombrePrenda": "Pantalon",
+      "precio": "7000",
+      "imagen": "https://umbroar.vtexassets.com/arquivos/ids/2292453-800-auto?v=638140588902700000&width=800&height=auto&aspect=true",
+      "categoria": "Pantalones Largos",
+      "color": "#0f0f0f",
+      "talle": "Lsd",
+      "descripcion": "Pantalon color negro, marca umbro, de algodon.",
+      "id": 3
+    },
+    {
+      "nombrePrenda": "Conjunto Puma",
+      "precio": "20000",
+      "imagen": "https://sporting.vtexassets.com/arquivos/ids/792826-800-800?v=638195163379700000&width=800&height=800&aspect=true",
+      "categoria": "Conjuntos",
+      "color": "#fb0909",
+      "talle": "M",
+      "descripcion": "Conjunto deportivo Puma, color rojo con negro, ",
+      "id": 4
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreUsuario": "admin",
+      "password": "123456"
+    }
+  ]
+}
