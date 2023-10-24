@@ -19,6 +19,16 @@
       "talle": "Lsd",
       "descripcion": "Pantalon color negro, marca umbro, de algodon.",
       "id": 3
+    },
+    {
+      "nombrePrenda": "Conjunto Puma",
+      "precio": "20000",
+      "imagen": "https://sporting.vtexassets.com/arquivos/ids/792826-800-800?v=638195163379700000&width=800&height=800&aspect=true",
+      "categoria": "Conjuntos",
+      "color": "#fb0909",
+      "talle": "M",
+      "descripcion": "Conjunto deportivo Puma, color rojo con negro, ",
+      "id": 4
     }
   ],
   "usuarios": [
