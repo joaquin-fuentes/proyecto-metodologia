@@ -10,6 +10,10 @@ const AdminProductos = () => {
 
   const [productos, setProductos] = useState([])
 
+  const [nombrePrenda, setNombrePrenda] = useState("");
+  const [categoria, setCategoria] = useState("");
+
+
   useEffect(()=>{
     obtenerProductos().then((respuesta)=>{
         if (respuesta != null){
@@ -20,6 +24,16 @@ const AdminProductos = () => {
         }
     })
 },[])
+
+const productosFiltrados = productos.filter((producto) => {
+  const nombrePrendaMatches =
+    nombrePrenda === "" || producto.nombrePrenda.toLowerCase().includes(nombrePrenda.toLowerCase());
+
+  const categoriaMatches =
+    categoria === "" || producto.categoria.toLowerCase().includes(categoria.toLowerCase());
+
+  return nombrePrendaMatches && categoriaMatches;
+});
 
   return (
     <Container className="mainSection my-4">
@@ -35,12 +49,16 @@ const AdminProductos = () => {
           <InputGroup.Text id="basic-addon1">Prenda</InputGroup.Text>
           <Form.Control
             placeholder="Buscar por nombre de prenda"
+            value={nombrePrenda}
+            onChange={(e) => setNombrePrenda(e.target.value)}
           />
         </InputGroup></Col>
         <Col md="6"><InputGroup className="mb-3">
           <InputGroup.Text id="basic-addon1">Categoria</InputGroup.Text>
           <Form.Control
             placeholder="Buscar por categoria de prenda"
+            value={categoria}
+            onChange={(e) => setCategoria(e.target.value)}
           />
         </InputGroup></Col>
       </Row>
@@ -58,9 +76,9 @@ const AdminProductos = () => {
         </thead>
         <tbody>
      {
-             productos.map((producto)=>{
-               return  <ItemProducto producto={producto} setProductos={setProductos} key={producto.id}></ItemProducto>
-             })
+            productosFiltrados.map((producto) => {
+              return <ItemProducto producto={producto} setProductos={setProductos} key={producto.id}></ItemProducto>;
+            })
      }
         </tbody>
       </Table>
