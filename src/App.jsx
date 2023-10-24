@@ -30,7 +30,7 @@ function App() {
           </RutasProtegidas>
         }></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
-          <Route exact path="/detalle" element={<DetalleProductoInicio></DetalleProductoInicio>}></Route>
+          <Route exact path="/detalle/:id" element={<DetalleProductoInicio></DetalleProductoInicio>}></Route>
 
           <Route exact path="/login" element={
           <Login>
