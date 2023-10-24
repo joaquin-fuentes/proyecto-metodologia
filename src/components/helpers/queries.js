@@ -11,9 +11,9 @@ export const login = async (usuario)=>{
         const listaUsuarios = await respuesta.json();
         console.log(listaUsuarios)
         //buscar si algun usuario coincide con el que recibi por parametros
-        const usuarioBuscado = listaUsuarios.find((itemUsuario)=>itemUsuario.email === usuario.email);
+        const usuarioBuscado = listaUsuarios.find((itemUsuario)=>itemUsuario.nombreUsuario === usuario.nombreUsuario);
         if(usuarioBuscado){
-            console.log("email encontrado")
+            console.log("usuario encontrado")
             //verificar el password
             if(usuarioBuscado.password === usuario.password){
                 console.log("encontramos al usuario")
@@ -23,7 +23,7 @@ export const login = async (usuario)=>{
                 return null
             }
         } else {
-            console.log("email incorrecto")
+            console.log("nombre usuario incorrecto")
             return null
         }
     } catch (error) {
