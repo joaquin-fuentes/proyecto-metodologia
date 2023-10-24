@@ -142,6 +142,99 @@
 
 }
 
+/* CSS Sobre Nosotros  */
+
+.iconos {
+      display: flex;
+      flex-direction: row;
+      height: 500px;
+}
+
+.cont1{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  flex-direction: row;
+
+} 
+
+.titulo{
+  margin: 30px;
+  width: 50%;
+  font-style: oblique;
+
+}
+
+.parrafo{
+  width: 50%;
+  margin: 30px;
+  color: white;
+  font-size: 120%;
+
+} 
 
 
+.cont2{
+  background-color: orange;
+  text-align: center;
+  height: 200px;
+ } 
+
+.titulo2{
+  margin: 30px;
+ }
+ 
+.parrafo2{
+  margin: 30px;
+ }
+
+ .contenedor-carrusel{
+  width: 50%;
+  margin: 30px;
+  background-color: #eaeaea;
+  border-radius: 2%;
+  
+ }
+
+/* css error */
+
+
+.imgError{
+  height: 100%;
+}
+
+.error{
+  padding-top: 100px;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* CSS CONTACTO */
+
+
+
+.contacto{
+  padding-top: 100px;
+  padding: 20px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.bgLogin{
+  background-image: url(../imagenes/login/loginPortada.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 

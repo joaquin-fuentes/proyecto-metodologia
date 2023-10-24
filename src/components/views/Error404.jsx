@@ -1,14 +1,16 @@
+import imgError from "../../assets/imagenes/error404.jpg"
+
 const Error404 = () => {
     return(
 
         <div>
 
-        <div class="container error">
-            {/* <img src="../imagenes/error404/error404.jpg" alt="" /> */}
+        <div className="container error">
+            <img className="imgError" src={imgError} alt="" />
             <h3>Lo sentimos, pagina que solicitaste no se encuentra disponible</h3>
-            <div class="boton">
-                <button type="button" class="btn btn-primary">
-                    <a class="nav-link active" href="../index.html"
+            <div className="boton">
+                <button type="button" className="btn btn-primary">
+                    <a className="nav-link active" href="/"
                     >Volver a la pagina de inicio</a
                     >
                 </button>
