@@ -51,7 +51,7 @@ const EditarProducto = () => {
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group className="mb-3">
                     <Form.Label>Prenda*</Form.Label>
-                    <Form.Control type="text" placeholder="Ej: Remera" maxLength={30} {
+                    <Form.Control type="text" placeholder="Ej: Remera" maxLength={60} {
                         ...register('nombrePrenda', {
                             required: 'El campo es obligatorio',
                             minLength: {
@@ -59,8 +59,8 @@ const EditarProducto = () => {
                                 message: "Este campo debe tener como minimo 2 caracteres"
                             },
                             maxLength: {
-                                value: 30,
-                                message: "Este campo debe tener como maximo 30 caracteres"
+                                value: 60,
+                                message: "Este campo debe tener como maximo 60 caracteres"
                             }
                         })
                     } />
@@ -70,11 +70,11 @@ const EditarProducto = () => {
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Precio*</Form.Label>
-                    <Form.Control type="number" placeholder="Ej:50" maxLength={5} min={0} max={10000} {
+                    <Form.Control type="number" placeholder="Ej:50" maxLength={6} min={0} max={200000} {
                         ...register('precio', {
                             required: 'El campo es obligatorio',
                             pattern: {
-                                value: /^(?:[1-9]\d{0,4}|100000)$/,
+                                value: /^(?:[1-9]\d{0,4}|200000)$/,
                                 message: "Debe ingresar un numero entre 1 y 1000000"
                             }
                         })

@@ -9,28 +9,28 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
 
     const logout = () => {
         Swal.fire({
-          title: "¿Está seguro?",
-          text: "¿Desea cerrar sesión?",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#3085d6",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Sí, cerrar sesión",
-          cancelButtonText: "Cancelar",
+            title: "¿Está seguro?",
+            text: "¿Desea cerrar sesión?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Sí, cerrar sesión",
+            cancelButtonText: "Cancelar",
         }).then((result) => {
-          if (result.isConfirmed) {
-            sessionStorage.removeItem("usuario");
-            setUsuarioLogueado(null); // Actualiza el estado a null o el valor adecuado para indicar que no hay usuario logueado.
-            navegar("/");
-          }
+            if (result.isConfirmed) {
+                sessionStorage.removeItem("usuario");
+                setUsuarioLogueado(null); // Actualiza el estado a null o el valor adecuado para indicar que no hay usuario logueado.
+                navegar("/");
+            }
         });
-      };
+    };
 
     return (
         <>
             <Navbar expand="lg" bg="dark" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="/"><img src={logo} alt="Logo de la pagina" className="logoMenu"/></Navbar.Brand>
+                    <Navbar.Brand href="/"><img src={logo} alt="Logo de la pagina" className="logoMenu" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav className="ms-auto">
@@ -39,7 +39,9 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                             <Nav.Link href="/sobrenosotros">Sobre nosotros</Nav.Link>
                             {usuarioLogueado ? (
                                 <Nav.Link onClick={logout}>Cerrar Sesión</Nav.Link>
-                            ) : null}        
+                            ) : (
+                                null
+                            )}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
