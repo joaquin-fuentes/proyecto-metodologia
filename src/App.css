@@ -133,6 +133,12 @@
 
 }
 
+/* CSS Sobre Nosotros  */
 
+.iconos {
+      display: flex;
+      flex-direction: row;
+      height: 500px;
+}
 
 
