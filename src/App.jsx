@@ -31,7 +31,6 @@ function App() {
         }></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route exact path="/detalle" element={<DetalleProductoInicio></DetalleProductoInicio>}></Route>
-
           <Route exact path="/login" element={
           <Login>
 

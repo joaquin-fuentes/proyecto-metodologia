@@ -1,3 +1,5 @@
+// importar foto
+
 const Contacto = () => {
     return(
         <div>
