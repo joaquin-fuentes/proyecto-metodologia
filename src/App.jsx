@@ -8,18 +8,19 @@ import RutasProtegidas from "./components/routes/RutasProtegidas";
 import Contacto from "./components/views/Contacto";
 import Error404 from "./components/views/Error404";
 import Login from "./components/views/Administrador/Login";
+import SobreNosotros from "./components/views/Administrador/SobreNosotros";
 import DetalleProductoInicio from "./components/views/DetalleProductoInicio";
-
-
+import { useState } from "react";
 
 
 function App() {
 
-
+  const usuarioStorage = JSON.parse(sessionStorage.getItem('usuario')) || {}
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioStorage);
 
   return (
     <BrowserRouter>
-      <Menu></Menu>
+      <Menu  usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
       <div className="mainSection">
         
         <Routes>
@@ -33,13 +34,24 @@ function App() {
           <Route exact path="/detalle/:id" element={<DetalleProductoInicio></DetalleProductoInicio>}></Route>
 
           <Route exact path="/login" element={
-          <Login>
+          <Login setUsuarioLogueado={setUsuarioLogueado}>
 
           </Login>}>
             
           </Route>
         
+          <Route exact path="/sobrenosotros" element={
+          
+          <SobreNosotros>
 
+          </SobreNosotros>}></Route>
+
+<Route exact path="/login" element={
+<Login>
+
+</Login>}>
+  
+</Route>
           {/* <Route path="/" element={<PagPrincipal></PagPrincipal>}></Route>
         <Route exact path="/detalleProducto/:id" element={<DetalleProducto></DetalleProducto>} ></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
