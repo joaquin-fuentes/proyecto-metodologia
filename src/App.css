@@ -141,4 +141,53 @@
       height: 500px;
 }
 
+.cont1{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  flex-direction: row;
+
+} 
+
+.titulo{
+  margin: 30px;
+  width: 50%;
+  font-style: oblique;
+
+}
+
+.parrafo{
+  width: 50%;
+  margin: 30px;
+  color: white;
+  font-size: 120%;
+
+} 
+
+
+.cont2{
+  background-color: orange;
+  text-align: center;
+  height: 200px;
+ } 
+
+.titulo2{
+  margin: 30px;
+ }
+ 
+.parrafo2{
+  margin: 30px;
+ }
+
+ .contenedor-carrusel{
+  width: 50%;
+  margin: 30px;
+  background-color: #eaeaea;
+  border-radius: 2%;
+  
+ }
 
