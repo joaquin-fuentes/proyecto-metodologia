@@ -11,10 +11,6 @@ import Login from "./components/views/Administrador/Login";
 import SobreNosotros from "./components/views/Administrador/SobreNosotros";
 import DetalleProductoInicio from "./components/views/DetalleProductoInicio";
 
-=========
-import SobreNosotros from "./components/views/Administrador/SobreNosotros";
->>>>>>>>> Temporary merge branch 2
-
 
 
 function App() {
