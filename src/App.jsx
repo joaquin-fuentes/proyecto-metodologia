@@ -10,15 +10,17 @@ import Error404 from "./components/views/Error404";
 import Login from "./components/views/Administrador/Login";
 import SobreNosotros from "./components/views/Administrador/SobreNosotros";
 import DetalleProductoInicio from "./components/views/DetalleProductoInicio";
+import { useState } from "react";
 
 
 function App() {
 
-
+  const usuarioStorage = JSON.parse(sessionStorage.getItem('usuario')) || {}
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioStorage);
 
   return (
     <BrowserRouter>
-      <Menu></Menu>
+      <Menu  usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
       <div className="mainSection">
         
         <Routes>
@@ -32,7 +34,7 @@ function App() {
           <Route exact path="/detalle/:id" element={<DetalleProductoInicio></DetalleProductoInicio>}></Route>
 
           <Route exact path="/login" element={
-          <Login>
+          <Login setUsuarioLogueado={setUsuarioLogueado}>
 
           </Login>}>
             
