@@ -200,3 +200,41 @@
   
  }
 
+/* css error */
+
+
+.imgError{
+  height: 100%;
+}
+
+.error{
+  padding-top: 100px;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* CSS CONTACTO */
+
+
+
+.contacto{
+  padding-top: 100px;
+  padding: 20px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.bgLogin{
+  background-image: url(../imagenes/login/loginPortada.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
