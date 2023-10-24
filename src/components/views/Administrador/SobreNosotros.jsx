@@ -25,7 +25,7 @@ const SobreNosotros = () => {
         <p>"En nuestra tienda de ropa, combinamos estilo, calidad y comodidad para brindarte una experiencia de compra excepcional. Desde las últimas tendencias de moda hasta clásicos atemporales, nuestra colección está diseñada para satisfacer tus gustos y necesidades. Ya sea que estés buscando prendas elegantes para una ocasión especial o ropa cómoda para el día a día, estamos comprometidos a ofrecerte una amplia variedad de opciones para que puedas expresar tu estilo único. Descubre la moda que te define y déjanos ser tu destino preferido para encontrar prendas que te hagan sentir seguro y a la moda en cualquier ocasión."</p>
       </div>
 
-      <div className='img'>
+      <div className=''>
               <img src={tienda} alt="" />
       </div>   
     </div>

@@ -10,6 +10,15 @@
     overflow: hidden;
   }
 
+  /* MEnu */
+.logoMenu{
+  width: 120px;
+  border-radius: 150px;
+}
+/* administrador */
+.imagenTablaAdministrador{
+  width: 50px;
+}
 /* Contacto */
 
 .contac{

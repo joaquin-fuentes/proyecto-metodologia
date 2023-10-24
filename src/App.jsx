@@ -8,7 +8,12 @@ import RutasProtegidas from "./components/routes/RutasProtegidas";
 import Contacto from "./components/views/Contacto";
 import Error404 from "./components/views/Error404";
 import Login from "./components/views/Administrador/Login";
+<<<<<<< HEAD
 import SobreNosotros from "./components/views/Administrador/SobreNosotros";
+=======
+import DetalleProductoInicio from "./components/views/DetalleProductoInicio";
+
+>>>>>>> dev
 
 
 
@@ -29,6 +34,7 @@ function App() {
           </RutasProtegidas>
         }></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
+          <Route exact path="/detalle/:id" element={<DetalleProductoInicio></DetalleProductoInicio>}></Route>
 
           <Route exact path="/login" element={
           <Login>
