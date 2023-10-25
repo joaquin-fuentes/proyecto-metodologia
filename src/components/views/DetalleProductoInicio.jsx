@@ -2,6 +2,8 @@ import { Container, Row, Col, Breadcrumb, Button } from "react-bootstrap"
 import { useEffect, useState } from "react";
 import { obtenerProducto } from "../helpers/queries";
 import { useParams, useNavigate, Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa"
+
 
 import Swal from 'sweetalert2';
 
@@ -16,7 +18,7 @@ const DetalleProductoInicio = () => {
         obtenerProducto(id).then((respuesta) => {
             if (respuesta != null) {
                 setProducto(respuesta)
-                setProductoWp(`${respuesta.nombrePrenda}, código: ${respuesta.id}`)
+                setProductoWp(`${respuesta.nombrePrenda}. CÓDIGO: ${respuesta.id}`)
             } else {
                 Swal.fire("Error", "No se pudo obtener los datos de la API", "error")
                 // navegacion("/error404")
@@ -44,8 +46,8 @@ const DetalleProductoInicio = () => {
                         <p className="fw-bold">Precio: <span className="fw-normal">${producto.precio}</span></p>
                         <Link className="btn btn-success"
                             target="_blank"
-                            to={`https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! Estoy interesado en tu producto:${productoWp}`}>
-                            Ir al WP
+                            to={`https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! Estoy interesado en tu PRODUCTO: ${productoWp}`}>
+                            Ir al Whatsapp <FaWhatsapp className="icono-whatsap" />
                         </Link>
                         <Link className="btn btn-primary mx-3"
                             to="/">

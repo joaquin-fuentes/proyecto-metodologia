@@ -1,27 +1,22 @@
-//  import face_logo from "../assets/facebook-logo.png";
-//  import tiktok_logo from "../assets/tiktok-logo.png";
-//  import wsp_logo from "../assets/wsp-logo.png";
+import { FaWhatsapp } from "react-icons/fa"
+import { FaFacebook } from "react-icons/fa"
+import { FaInstagramSquare } from "react-icons/fa"
+import { Nav } from "react-bootstrap";
 
 const Footer = () => {
-    return (
-        <footer className='bg-dark text-light text-center p-4'>
-            <h3>&copy; Todos los derechos reservados</h3>
-        </footer>
+  return (
+    <footer className='bg-dark text-light text-center p-4'>
+      <h3>Nuestras redes sociales</h3>
+      <div className="d-flex justify-content-center">
+        <Nav.Link className="mx-4 mb-4 fs-2"><FaWhatsapp className="icono-whatsap" /></Nav.Link>
+        <Nav.Link className="mx-4 mb-4 fs-2"><FaFacebook className="icono-facebook" /></Nav.Link>
+        <Nav.Link className="mx-4 mb-4 fs-2"><FaInstagramSquare className="icono-instagram" /></Nav.Link>
+      </div>
 
-/* <div className='iconos'>
-<div className='icono'>
-  <img src={face_logo} alt="" />
-</div>
+      <h3>&copy; Todos los derechos reservados</h3>
+    </footer>
 
-<div className='icono'>
-  <img src={tiktok_logo} alt="" />
-</div>
-
-<div className='icono'>
-  <img src={wsp_logo} alt="" />
-</div> */
-
-    );
+  );
 };
 
 export default Footer;

@@ -3,6 +3,10 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/imagenes/logoCatalogo.png";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import {FaWhatsapp} from "react-icons/fa"
+import {FaFacebook} from "react-icons/fa"
+import {FaInstagramSquare} from "react-icons/fa"
+
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
     const navegar = useNavigate();
@@ -42,6 +46,11 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                             ) : (
                                 null
                             )}
+                            <Nav.Link><FaWhatsapp className="icono-whatsap"/></Nav.Link>
+                            <Nav.Link><FaFacebook className="icono-facebook"/></Nav.Link>
+                            <Nav.Link><FaInstagramSquare className="icono-instagram"/></Nav.Link>
+
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

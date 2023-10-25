@@ -3,6 +3,7 @@ import imgBanner from "../../assets/imagenes/bannerInicio.png"
 import { useEffect, useState } from "react";
 import { obtenerProductos } from "../helpers/queries";
 import CardProducto from "./CardProducto";
+import {FaSearch} from "react-icons/fa"
 
 const Inicio = () => {
     const [productos, setProductos] = useState([])
@@ -38,9 +39,9 @@ const Inicio = () => {
                 <h1>Nuestros Productos</h1>
                 <hr />
                 <InputGroup className="mb-3">
-                    <InputGroup.Text id="basic-addon1">Buscar</InputGroup.Text>
+                    <InputGroup.Text id="basic-addon1"><FaSearch/></InputGroup.Text>
                     <Form.Control
-                        placeholder="Buscar por nombre de prenda"
+                        placeholder="Buscar"
                         value={nombrePrenda}
                         onChange={(e) => setNombrePrenda(e.target.value)}
                     />

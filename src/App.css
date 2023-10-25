@@ -15,6 +15,15 @@
   width: 120px;
   border-radius: 150px;
 }
+.icono-whatsap{
+  color: rgb(52, 238, 0);
+}
+.icono-facebook{
+  color: rgb(0, 115, 255);
+}
+.icono-instagram{
+  color: rgb(177, 5, 186);
+}
 /* inicio */
 .imgBanner{
   height: 40vh;
@@ -27,10 +36,16 @@
 .cuerpoProductoInicio{
   overflow: hidden; /* Oculta el contenido que se desborda */
   text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto */
-  height: 170px;
+  height: 175px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.nombrePrenda{
+  margin-bottom: 0px!important;
+}
+.precioPrenda{
+  margin-bottom: 2px;
 }
 @media (max-width: 768px) {
   .alineacionProductos {
@@ -44,19 +59,32 @@
   height: 170px;
 }
 .cuerpoProductoInicio{
-  height: 100px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 .nombrePrenda{
-  font-size: 12px!important;
+  font-size: 11px!important;
   margin: 0!important;
 }
 .precioPrenda{
-  font-size: 12px!important;
+  font-size: 11px!important;
   margin: 0!important;
   margin-bottom: 3px!important;
 }
 .botonPrenda{
-  font-size: 12px!important;
+  font-size: 10px!important;
+  margin: 1px;
+  height: 100%;
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+}
+.contenedorBotonesPrendas{
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
 }
 }
 
