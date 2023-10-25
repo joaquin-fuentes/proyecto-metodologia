@@ -62,7 +62,7 @@ const productosFiltrados = productos.filter((producto) => {
           />
         </InputGroup></Col>
       </Row>
-      <Table striped bordered hover responsive variant="dark">
+      <Table striped bordered hover responsive variant="dark" className="text-center">
         <thead>
           <tr>
             <th>Código</th>

@@ -3,7 +3,7 @@
     flex-direction: column;
     min-height: 100vh;
     /* background-image: url("../src/components/views/Assets/Nike-logo.webp"); */
-    background: linear-gradient(rgb(0, 153, 255), rgb(255, 0, 255))  ;
+    background: linear-gradient(rgba(85, 187, 255, 0.718), rgba(242, 155, 242, 0.685))  ;
   }
   .mainSection{
     flex-grow: 1;
@@ -18,6 +18,7 @@
 /* administrador */
 .imagenTablaAdministrador{
   width: 50px;
+  height: 55px;
 }
 /* Contacto */
 
@@ -181,7 +182,8 @@
 .cont2{
   background-color: orange;
   text-align: center;
-  height: 200px;
+  padding-top: 5px;
+  padding-bottom: 10px;
  } 
 
 .titulo2{
@@ -193,13 +195,18 @@
  }
 
  .contenedor-carrusel{
-  width: 50%;
+  width: 70%;
   margin: 30px;
   background-color: #eaeaea;
   border-radius: 2%;
-  
  }
-
+ .contenedorImgCarrousel{
+  width: 100%;
+  height: 400px;
+ }
+ .contenedorImgCarrousel img{
+  height: 100%;
+ }
 /* css error */
 
 
@@ -222,9 +229,16 @@
 
 
 .contacto{
-  padding-top: 100px;
   padding: 20px;
-  margin-top: 100px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.ubicacion{
+  padding: 50px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 30px;

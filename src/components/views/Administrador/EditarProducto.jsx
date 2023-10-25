@@ -45,7 +45,7 @@ const EditarProducto = () => {
 
     }, [])
     return (
-        <Container className="my-4">
+        <Container className="my-4 border border-dark p-5 rounded">            
             <h2>Editar prenda</h2>
             <hr />
             <Form onSubmit={handleSubmit(onSubmit)}>
