@@ -15,6 +15,51 @@
   width: 120px;
   border-radius: 150px;
 }
+/* inicio */
+.imgBanner{
+  height: 40vh;
+  width: 100%;
+}
+.imagenProductoInicio{
+  height: 300px;
+  object-fit: cover;
+}
+.cuerpoProductoInicio{
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto */
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media (max-width: 768px) {
+  .alineacionProductos {
+   display: flex;
+   justify-content: center;
+  }
+  .imgBanner{
+    height: 40vh;
+ }
+ .imagenProductoInicio{
+  height: 170px;
+}
+.cuerpoProductoInicio{
+  height: 100px;
+}
+.nombrePrenda{
+  font-size: 12px!important;
+  margin: 0!important;
+}
+.precioPrenda{
+  font-size: 12px!important;
+  margin: 0!important;
+  margin-bottom: 3px!important;
+}
+.botonPrenda{
+  font-size: 12px!important;
+}
+}
+
 /* administrador */
 .imagenTablaAdministrador{
   width: 50px;

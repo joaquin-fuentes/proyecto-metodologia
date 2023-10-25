@@ -42,10 +42,14 @@ const DetalleProductoInicio = () => {
                         <p className="fw-bold ">Descripcion: <span className="fw-normal">{producto.descripcion}</span></p>
                         <p className="fw-bold">Color: <span className="fw-normal p-1" style={{ backgroundColor: producto.color}}>{producto.color}</span></p>  
                         <p className="fw-bold">Precio: <span className="fw-normal">${producto.precio}</span></p>
-                        <Link className="btn btn-primary"
+                        <Link className="btn btn-success"
                             target="_blank"
                             to={`https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! Estoy interesado en tu producto:${productoWp}`}>
                             Ir al WP
+                        </Link>
+                        <Link className="btn btn-primary mx-3"
+                            to="/">
+                             Volver
                         </Link>
                     </article>
 

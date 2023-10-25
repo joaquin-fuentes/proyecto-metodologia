@@ -11,6 +11,7 @@ import Login from "./components/views/Administrador/Login";
 import SobreNosotros from "./components/views/Administrador/SobreNosotros";
 import DetalleProductoInicio from "./components/views/DetalleProductoInicio";
 import { useState } from "react";
+import Inicio from "./components/views/Inicio";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <RutasAdministrador></RutasAdministrador>
           </RutasProtegidas>
         }></Route>
+          <Route exact path="/" element={<Inicio></Inicio>}></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route exact path="/detalle/:id" element={<DetalleProductoInicio></DetalleProductoInicio>}></Route>
 

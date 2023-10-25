@@ -11,29 +11,33 @@ const AdminProductos = () => {
   const [productos, setProductos] = useState([])
 
   const [nombrePrenda, setNombrePrenda] = useState("");
-  const [categoria, setCategoria] = useState("");
+  const [id, setId] = useState(0);
 
 
-  useEffect(()=>{
-    obtenerProductos().then((respuesta)=>{
-        if (respuesta != null){
-            setProductos(respuesta)
-        } else{
-            Swal.fire("Error", "No se pudo obtener los datos de la API", "error")
-            // navegacion("/error404")
-        }
+  useEffect(() => {
+    obtenerProductos().then((respuesta) => {
+      if (respuesta != null) {
+        setProductos(respuesta)
+      } else {
+        Swal.fire("Error", "No se pudo obtener los datos de la API", "error")
+        // navegacion("/error404")
+      }
     })
-},[])
+  }, [])
 
-const productosFiltrados = productos.filter((producto) => {
-  const nombrePrendaMatches =
-    nombrePrenda === "" || producto.nombrePrenda.toLowerCase().includes(nombrePrenda.toLowerCase());
+  const productosFiltrados = productos.filter((producto) => {
+    const nombrePrendaMatches =
+      nombrePrenda === "" || producto.nombrePrenda.toLowerCase().includes(nombrePrenda.toLowerCase());
 
-  const categoriaMatches =
-    categoria === "" || producto.categoria.toLowerCase().includes(categoria.toLowerCase());
+    const idMatches = id === 0 || producto.id === id;
 
-  return nombrePrendaMatches && categoriaMatches;
-});
+    return nombrePrendaMatches && idMatches;
+  });
+
+  const handleIdChange = (e) => {
+    const value = parseInt(e.target.value);
+    setId(isNaN(value) ? 0 : value);
+  };
 
   return (
     <Container className="mainSection my-4">
@@ -54,11 +58,12 @@ const productosFiltrados = productos.filter((producto) => {
           />
         </InputGroup></Col>
         <Col md="6"><InputGroup className="mb-3">
-          <InputGroup.Text id="basic-addon1">Categoria</InputGroup.Text>
+          <InputGroup.Text id="basic-addon1">Codigo</InputGroup.Text>
           <Form.Control
-            placeholder="Buscar por categoria de prenda"
-            value={categoria}
-            onChange={(e) => setCategoria(e.target.value)}
+            type="number"
+            placeholder="Buscar por codigo de prenda"
+            value={id === 0 ? "" : id}
+            onChange={handleIdChange}
           />
         </InputGroup></Col>
       </Row>
@@ -76,11 +81,11 @@ const productosFiltrados = productos.filter((producto) => {
           </tr>
         </thead>
         <tbody>
-     {
+          {
             productosFiltrados.map((producto) => {
               return <ItemProducto producto={producto} setProductos={setProductos} key={producto.id}></ItemProducto>;
             })
-     }
+          }
         </tbody>
       </Table>
     </Container>
