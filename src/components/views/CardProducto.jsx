@@ -1,5 +1,5 @@
-import { Card, Col, Button } from "react-bootstrap"
-import { Link, NavLink } from "react-router-dom"
+import { Card, Col } from "react-bootstrap"
+import { NavLink } from "react-router-dom"
 
 
 const CardProducto = ({producto}) => {
@@ -14,7 +14,7 @@ const CardProducto = ({producto}) => {
                     </Card.Text>
                     <NavLink end to={`/detalle/${producto.id}`} className={"btn btn-primary botonPrenda"} >Ver detalle</NavLink>
                 </Card.Body>
-                
+
             </Card>
         </Col>
     );
