@@ -4,8 +4,7 @@ const URL_PRODUCTO = import.meta.env.VITE_API_PRODUCTO
 
 
 export const login = async (usuario)=>{
-    
-    console.log(usuario)
+
     try {
         const respuesta = await fetch(URL_USUARIO);
         const listaUsuarios = await respuesta.json();

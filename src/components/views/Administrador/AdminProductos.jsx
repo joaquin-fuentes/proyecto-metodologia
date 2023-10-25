@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { obtenerProductos } from "../../helpers/queries";
 import Swal from "sweetalert2";
-
 import ItemProducto from "./ItemProducto"
 
 const AdminProductos = () => {

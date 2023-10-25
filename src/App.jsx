@@ -10,6 +10,7 @@ import Error404 from "./components/views/Error404";
 import Login from "./components/views/Administrador/Login";
 import SobreNosotros from "./components/views/Administrador/SobreNosotros";
 import DetalleProductoInicio from "./components/views/DetalleProductoInicio";
+import Inicio from "./components/views/Administrador/Inicio";
 
 
 
@@ -51,6 +52,15 @@ function App() {
 </Login>}>
   
 </Route>
+
+        <Route exact path="/" element={
+          
+          <Inicio>
+
+          </Inicio>}>
+
+        </Route>
+
           {/* <Route path="/" element={<PagPrincipal></PagPrincipal>}></Route>
         <Route exact path="/detalleProducto/:id" element={<DetalleProducto></DetalleProducto>} ></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
