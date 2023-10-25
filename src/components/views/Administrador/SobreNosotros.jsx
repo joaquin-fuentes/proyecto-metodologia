@@ -21,7 +21,7 @@ const SobreNosotros = () => {
            </h1>
       </div>
 
-      <div className='parrafo text-dark'>
+      <div className='parrafo'>
         <p>"En nuestra tienda de ropa, combinamos estilo, calidad y comodidad para brindarte una experiencia de compra excepcional. Desde las últimas tendencias de moda hasta clásicos atemporales, nuestra colección está diseñada para satisfacer tus gustos y necesidades. Ya sea que estés buscando prendas elegantes para una ocasión especial o ropa cómoda para el día a día, estamos comprometidos a ofrecerte una amplia variedad de opciones para que puedas expresar tu estilo único. Descubre la moda que te define y déjanos ser tu destino preferido para encontrar prendas que te hagan sentir seguro y a la moda en cualquier ocasión."</p>
       </div>
 
@@ -31,7 +31,7 @@ const SobreNosotros = () => {
     </div>
 
     
-    <div className='cont2'>
+    <div className='cont2 text-dark'>
           <div className='titulo2'>
             <h1>Nuestro camino hacia el éxito</h1>
           </div>
@@ -42,7 +42,7 @@ const SobreNosotros = () => {
 
     </div>
 
-    <div className='contenedor-carrusel text-center'>
+    <div className='contenedor-carrusel text-center text-dark'>
 
     <h1>Nuestra Gente</h1>
       <Carousel className='w-100'>

@@ -40,7 +40,7 @@ const CrearProducto = () => {
     }
 
     return (
-        <Container className="my-4 border border-dark p-5 rounded">
+        <Container className="my-4 border border-white p-5 rounded">
             <h2>Cargar Nueva Prenda</h2>
             <hr />
             <Form onSubmit={handleSubmit(onSubmit)}>

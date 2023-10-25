@@ -22,7 +22,7 @@ function App() {
   return (
     <BrowserRouter>
       <Menu  usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
-      <div className="mainSection">
+      <div className="mainSection text-white">
         
         <Routes>
 

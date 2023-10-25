@@ -2,8 +2,12 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* background-image: url("../src/components/views/Assets/Nike-logo.webp"); */
-    background: linear-gradient(rgba(85, 187, 255, 0.718), rgba(242, 155, 242, 0.685))  ;
+    background: linear-gradient(
+      to bottom,   /* Dirección del gradiente (puedes ajustarlo) */
+      rgba(54, 53, 53, 0.5),  /* Color 1 con opacidad */
+      rgba(0, 0, 255, 0.5)   /* Color 2 con opacidad */
+    ), url('../src/assets/imagenes/fondo4.jpg') center center fixed no-repeat;
+    background-size: cover;
   }
   .mainSection{
     flex-grow: 1;
