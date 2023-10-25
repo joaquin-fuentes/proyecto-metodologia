@@ -41,7 +41,16 @@ import { obtenerProductos } from "../../helpers/queries";
 
    return (
 
+    
+
     <div>
+      <nav>
+          <ul>
+            <li><Link to="/categorias/mujeres">Mujeres</Link></li>
+            <li><Link to="/categorias/hombres">Hombres</Link></li>
+            <li><Link to="/ofertas">Ofertas</Link></li>
+          </ul>
+      </nav>
       
       <h1 className="">Vero Ropa Deportiva Por Mayor</h1>
       
