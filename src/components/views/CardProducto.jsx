@@ -14,6 +14,7 @@ const CardProducto = ({producto}) => {
                     </Card.Text>
                     <NavLink end to={`/detalle/${producto.id}`} className={"btn btn-primary botonPrenda"} >Ver detalle</NavLink>
                 </Card.Body>
+                
             </Card>
         </Col>
     );
