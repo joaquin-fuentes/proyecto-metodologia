@@ -1,19 +1,22 @@
-import { Container, Row, InputGroup, Form, Col} from "react-bootstrap"
+import { Container, Row, InputGroup, Form, Col,Spinner } from "react-bootstrap"
 import imgBanner from "../../assets/imagenes/bannerInicio.png"
 import { useEffect, useState } from "react";
 import { obtenerProductos } from "../helpers/queries";
 import CardProducto from "./CardProducto";
-import {FaSearch} from "react-icons/fa"
+import { FaSearch } from "react-icons/fa"
+
 
 const Inicio = () => {
     const [productos, setProductos] = useState([])
     const [nombrePrenda, setNombrePrenda] = useState("");
-
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        setIsLoading(true); // Establece isLoading en true al inicio de la carga
         obtenerProductos().then((respuesta) => {
             if (respuesta != null) {
                 setProductos(respuesta)
+                setIsLoading(false); // Cambia isLoading a false cuando los productos se cargan con éxito
             } else {
                 Swal.fire("Error", "No se pudo obtener los datos de la API", "error")
                 // navegacion("/error404")
@@ -39,7 +42,7 @@ const Inicio = () => {
                 <h1>Nuestros Productos</h1>
                 <hr />
                 <InputGroup className="mb-3">
-                    <InputGroup.Text id="basic-addon1"><FaSearch/></InputGroup.Text>
+                    <InputGroup.Text id="basic-addon1"><FaSearch /></InputGroup.Text>
                     <Form.Control
                         placeholder="Buscar"
                         value={nombrePrenda}
@@ -47,13 +50,16 @@ const Inicio = () => {
                     />
                 </InputGroup>
 
-                <Row className="alineacionProductos">
-                    {
-                        productosFiltrados.map((producto) => {
-                            return  <CardProducto producto={producto} key={producto.id}></CardProducto>
-                        })
-                    }
-                </Row>
+                {isLoading ? (<div className="d-flex justify-content-center mt-4">
+                                 <Spinner className="text-center" animation="border" variant="primary" />
+                             </div>) :
+                    (
+                        <Row className="alineacionProductos">
+                            {productosFiltrados.map((producto) => (
+                                <CardProducto producto={producto} key={producto.id} />
+                            ))}
+                        </Row>
+                    )}
             </Container>
         </main >
     );
