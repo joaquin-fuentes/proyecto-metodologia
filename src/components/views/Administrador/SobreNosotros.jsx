@@ -12,7 +12,7 @@
 const SobreNosotros = () => {
   return (
     
-  <div className='Contenedor'>
+  <div className='Contenedor text-center d-flex flex-column align-items-center'>
     
     <div className='cont1'>
        <div className='titulo'>
@@ -21,7 +21,7 @@ const SobreNosotros = () => {
            </h1>
       </div>
 
-      <div className='parrafo'>
+      <div className='parrafo text-dark'>
         <p>"En nuestra tienda de ropa, combinamos estilo, calidad y comodidad para brindarte una experiencia de compra excepcional. Desde las últimas tendencias de moda hasta clásicos atemporales, nuestra colección está diseñada para satisfacer tus gustos y necesidades. Ya sea que estés buscando prendas elegantes para una ocasión especial o ropa cómoda para el día a día, estamos comprometidos a ofrecerte una amplia variedad de opciones para que puedas expresar tu estilo único. Descubre la moda que te define y déjanos ser tu destino preferido para encontrar prendas que te hagan sentir seguro y a la moda en cualquier ocasión."</p>
       </div>
 
@@ -42,20 +42,20 @@ const SobreNosotros = () => {
 
     </div>
 
-    <div className='contenedor-carrusel'>
+    <div className='contenedor-carrusel text-center'>
 
     <h1>Nuestra Gente</h1>
-      <Carousel>
+      <Carousel className='w-100'>
        
-        <div>
+        <div className='contenedorImgCarrousel'>
           <img src={vendedor1} alt=""/>
         </div>
 
-        <div>
+        <div className='contenedorImgCarrousel'>
           <img src={vendedor2} alt=""/>      
         </div>
 
-        <div>
+        <div className='contenedorImgCarrousel'>
           <img src={vendedor3} alt="" />        
         </div>
       </Carousel>
