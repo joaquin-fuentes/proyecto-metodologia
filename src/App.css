@@ -113,12 +113,13 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   background-color: white;
   padding-bottom: 30px;  
-  width: 600px;
+  width: 50%;
   border-radius: 2%;
 }
+
 
 .header{
   display: flex;
@@ -187,7 +188,14 @@
   cursor: pointer;
 
 }
-
+@media (max-width: 768px) {
+  .conteiner{
+    width: 90%;
+  }
+  .input{
+    width: 90%;
+  }
+}
 /* CSS Sobre Nosotros  */
 
 .iconos {
@@ -197,33 +205,33 @@
 }
 
 .cont1{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   margin: 0;
   flex-direction: row;
-
 } 
 
 .titulo{
   margin: 30px;
-  width: 50%;
+  width: 100%;
   font-style: oblique;
 
 }
 
 .parrafo{
-  width: 50%;
+  width: 100%;
   margin: 30px;
   color: white;
   font-size: 120%;
 
 } 
 
+.imagenSobreNosotros{
 
+  width: 100%;
+}
 .cont2{
   background-color: orange;
   text-align: center;
@@ -252,6 +260,15 @@
  .contenedorImgCarrousel img{
   height: 100%;
  }
+ @media (max-width: 768px) {
+  
+ .contenedor-carrusel{
+  width: 100%;
+ }
+ .contenedorImgCarrousel{
+  height: 370px;
+ }
+ }
 /* css error */
 
 
@@ -273,7 +290,7 @@
 
 
 
-.contacto{
+/* .contacto{
   padding: 20px;
   margin-top: 20px;
   display: flex;
@@ -290,10 +307,9 @@
   align-items: center;
 }
 
-.bgLogin{
-  background-image: url(../imagenes/login/loginPortada.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
+@media (max-width: 768px) {
+ .ubicacion{
+  margin-top: 0px;
+ }
+} */
