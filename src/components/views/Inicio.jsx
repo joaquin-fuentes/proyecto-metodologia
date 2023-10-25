@@ -4,12 +4,16 @@ import { useEffect, useState } from "react";
 import { obtenerProductos } from "../helpers/queries";
 import CardProducto from "./CardProducto";
 import { FaSearch } from "react-icons/fa"
+import Carousel1 from "./Carousel1";
+
 
 
 const Inicio = () => {
     const [productos, setProductos] = useState([])
     const [nombrePrenda, setNombrePrenda] = useState("");
     const [isLoading, setIsLoading] = useState(true);
+
+ 
 
     useEffect(() => {
         setIsLoading(true); // Establece isLoading en true al inicio de la carga
@@ -35,10 +39,10 @@ const Inicio = () => {
         <main>
             <Container fluid className="p-0">
                 <Row>
-                    <img src={imgBanner} alt="banner de pagina de inicio" className="imgBanner" />
+                    <Carousel1></Carousel1>
                 </Row>
             </Container>
-            <Container className="my-4">
+            <Container className="my-4" id="productos">
                 <h1>Nuestros Productos</h1>
                 <hr />
                 <InputGroup className="mb-3">

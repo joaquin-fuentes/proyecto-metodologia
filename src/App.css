@@ -29,9 +29,11 @@
   color: rgb(177, 5, 186);
 }
 /* inicio */
-.imgBanner{
-  height: 40vh;
-  width: 100%;
+.carouselInicio{
+  height: 50vh;
+}
+.imgCarousel{
+  height: 50vh;
 }
 .imagenProductoInicio{
   height: 300px;

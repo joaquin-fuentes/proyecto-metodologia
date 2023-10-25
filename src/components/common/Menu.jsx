@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import { FaWhatsapp } from "react-icons/fa"
 import { FaFacebook } from "react-icons/fa"
 import { FaInstagramSquare } from "react-icons/fa"
+import { FaHome } from "react-icons/fa"
 
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
@@ -38,7 +39,8 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav className="ms-auto">
-                            <Nav.Link href="/">Inicio</Nav.Link>
+                            <Nav.Link href="/"><FaHome className="me-1 mb-1"/>Inicio</Nav.Link>
+                            <Nav.Link href="/#productos">Productos</Nav.Link>
                             <Nav.Link href="/contacto">Contacto</Nav.Link>
                             <Nav.Link href="/sobrenosotros">Sobre nosotros</Nav.Link>
                             {usuarioLogueado ? (
