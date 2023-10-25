@@ -8,8 +8,8 @@ const CardProducto = ({ producto }) => {
 
     return (
         <Col xs={6} md={4} lg={3}>
-            <Card className="m-1">
-                <Card.Img variant="top" src={producto.imagen} className="imagenProductoInicio" />
+            <Card className="m-1 zoom-on-hover">
+                <Card.Img variant="top" src={producto.imagen} className="imagenProductoInicio "/>
                 <Card.Body className="cuerpoProductoInicio">
                     <Card.Title className="nombrePrenda">{producto.nombrePrenda}</Card.Title>
                     <Card.Text className="precioPrenda">

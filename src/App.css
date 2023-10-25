@@ -33,6 +33,13 @@
   height: 300px;
   object-fit: cover;
 }
+.zoom-on-hover {
+  transition: transform 0.2s; /* Agregar una transición suave */
+}
+
+.zoom-on-hover:hover {
+  transform: scale(1.02); /* Escalar un 10% más grande al pasar el mouse por encima */
+}
 .cuerpoProductoInicio{
   overflow: hidden; /* Oculta el contenido que se desborda */
   text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto */
