@@ -252,3 +252,171 @@
   background-size: cover;
 }
 
+ /* CSS del Inicio */
+
+
+.contenedor-inicio {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.b-cont{
+  margin: 10px;
+}
+
+.nav-b{
+  background-color: rgba(128, 128, 128, 0.372)
+}
+
+
+.logo img{
+  display: block; 
+  margin: 0 auto;
+}
+
+.logo{
+  background-color: black;
+}
+
+.buscador-body{
+  margin: 10px;
+  padding: 10px;
+}
+
+.busc{
+  width: 3000px;
+  border-radius: 50px;
+  font-size: 19px;
+text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cart {
+  background-color: #ff5722;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 20%;
+}
+
+
+
+.slider img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.destacados, .nuevas-colecciones {
+  margin-top: 20px;
+}
+
+.destacados h2, .nuevas-colecciones h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.productos .producto {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.productos .producto img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+
+
+
+.redes-sociales a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cont-prod{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.cont-prod li{
+  list-style-type: none;
+}
+
+
+.card-cont{
+  margin: 5px; 
+  padding: 10px;
+  border: 3px solid #ccc;
+  box-shadow:  2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 20px;
+  
+}
+
+.c-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-txt{
+  padding: 10px; 
+}
+
+.Car-b{
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.car-imagen{
+  height: 300px;
+  object-fit: cover;
+}
+
+.desc-car{
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Número de líneas permitidas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
