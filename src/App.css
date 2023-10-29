@@ -373,6 +373,11 @@ nav a {
   margin: 20px;
 }
 
+.cont-prod li{
+  list-style-type: none;
+}
+
+
 .card-cont{
   margin: 5px; 
   padding: 10px;

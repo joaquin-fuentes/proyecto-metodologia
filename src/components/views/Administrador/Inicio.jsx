@@ -36,19 +36,6 @@ const Inicio = () => {
 
   return (
     <div>
-      <nav className="nav-b">
-        <ul>
-          <li>
-            <Link to="/categorias/mujeres">Mujeres</Link>
-          </li>
-          <li>
-            <Link to="/categorias/hombres">Hombres</Link>
-          </li>
-          <li>
-            <Link to="/ofertas">Ofertas</Link>
-          </li>
-        </ul>
-      </nav>
 
       <div className="b-cont">
         <div className="logo">
@@ -68,6 +55,7 @@ const Inicio = () => {
 
         <div>
           <ul className="cont-prod">
+            
             {productosFiltrados.map((producto) => {
               return (
                 <li key={producto.id} className="card-cont">

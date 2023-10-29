@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/imagenes/logoCatalogo.png";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import InicioLogo from "../../assets/imagenes/InicioIcono.png"
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
     const navegar = useNavigate();
@@ -34,7 +35,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav className="ms-auto">
-                            <Nav.Link href="/">Inicio</Nav.Link>
+                            <Nav.Link href="/">Inicio</Nav.Link>             
                             <Nav.Link href="/contacto">Contacto</Nav.Link>
                             <Nav.Link href="/sobrenosotros">Sobre nosotros</Nav.Link>
                             {usuarioLogueado ? (
