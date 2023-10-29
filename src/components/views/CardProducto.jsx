@@ -12,8 +12,8 @@ const CardProducto = ({ producto }) => {
                 <Card.Img variant="top" src={producto.imagen} className="imagenProductoInicio "/>
                 <Card.Body className="cuerpoProductoInicio">
                     <Card.Title className="nombrePrenda">{producto.nombrePrenda}</Card.Title>
-                    <Card.Text className="precioPrenda">
-                        $ {producto.precio}
+                    <Card.Text className="my-1" >
+                        <span className="precioPrenda fw-bold rounded p-1">$ {producto.precio}</span>
                     </Card.Text>
                     <div className="contenedorBotonesPrendas">
                         <NavLink end to={`/detalle/${producto.id}`} className={"w-100 my-1 btn btn-primary botonPrenda"} >Ver detalle</NavLink>

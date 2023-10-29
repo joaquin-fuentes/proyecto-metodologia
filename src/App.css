@@ -35,6 +35,7 @@
 .imgCarousel{
   height: 50vh;
 }
+
 .imagenProductoInicio{
   height: 300px;
   object-fit: cover;
@@ -59,6 +60,7 @@
 }
 .precioPrenda{
   margin-bottom: 2px;
+  background-color: greenyellow;
 }
 @media (max-width: 768px) {
   .alineacionProductos {
@@ -67,38 +69,40 @@
   }
   .imgBanner{
     height: 40vh;
- }
- .imagenProductoInicio{
+  }
+  .imagenProductoInicio{
   height: 170px;
-}
-.cuerpoProductoInicio{
+  }
+  .cuerpoProductoInicio{
   height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-.nombrePrenda{
-  font-size: 11px!important;
-  margin: 0!important;
-}
-.precioPrenda{
-  font-size: 11px!important;
-  margin: 0!important;
-  margin-bottom: 3px!important;
-}
-.botonPrenda{
-  font-size: 10px!important;
-  margin: 1px;
-  height: 100%;
-  display: flex!important;
-  justify-content: center!important;
-  align-items: center!important;
-}
-.contenedorBotonesPrendas{
-  display: flex!important;
-  justify-content: center!important;
-  align-items: center!important;
-}
+  }
+  .nombrePrenda{
+    font-size: 11px!important;
+    margin: 0!important;
+  }
+  .precioPrenda{
+    font-size: 11px!important;
+    margin: 0!important;
+    margin-bottom: 3px!important;
+  }
+  .botonPrenda{
+    
+    font-size: 8px!important;
+    margin: 1px;
+    height: 100%;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    flex-direction: column!important;
+  }
+  .contenedorBotonesPrendas{
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+  }
 }
 
 /* administrador */
