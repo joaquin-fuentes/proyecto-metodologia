@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa"
 const CardProducto = ({ producto }) => {
 
     return (
-        <Col xs={6} md={4} lg={3}>
+        <Col className="fade-in"  xs={6} md={4} lg={3}>
             <Card className="m-1 zoom-on-hover">
                 <Card.Img variant="top" src={producto.imagen} className="imagenProductoInicio "/>
                 <Card.Body className="cuerpoProductoInicio">

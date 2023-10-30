@@ -70,7 +70,7 @@ const CrearProducto = () => {
                             required: 'El campo es obligatorio',
                             pattern: {
                                 value: /^(?:[1-9]\d{0,4}|200000)$/,
-                                message: "Debe ingresar un numero entre 1 y 1000000"
+                                message: "Debe ingresar un numero entre 1 y 200000"
                             }
                         })
                     } />

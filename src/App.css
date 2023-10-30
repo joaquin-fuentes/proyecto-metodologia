@@ -36,6 +36,19 @@
   height: 50vh;
 }
 
+.fade-in {
+  animation: fadeIn 1s ease both;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
 .imagenProductoInicio{
   height: 300px;
   object-fit: cover;
