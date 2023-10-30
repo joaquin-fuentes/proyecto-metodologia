@@ -46,18 +46,18 @@ const ItemProducto = ({ producto, setProductos }) => {
             <td>{producto.categoria}</td>
             <td><img src={producto.imagen} alt="imagen de prenda" className="imagenTablaAdministrador" /></td>
             <td>${producto.precio}</td>
-            <td>
+            <td className="d-flex">
               <Link
-                className="btn btn-success m-1"
+                className="btn btn-success m-1 d-flex justify-content-center align-items-center"
                 to={`/administrador/detalle/${producto._id}`}
               > Ver detalle
               </Link>
               <Link
-                className="btn btn-warning m-1"
+                className="btn btn-warning m-1 d-flex justify-content-center align-items-center"
                 to={`/administrador/editar/${producto._id}`}
               > Editar
               </Link>
-              <Button className="m-1" variant="danger" onClick={borrarProducto}>Eliminar</Button>
+              <Button className="m-1 d-flex justify-content-center align-items-center" variant="danger" onClick={borrarProducto}>Eliminar</Button>
             </td>
         </tr>
     );
