@@ -21,48 +21,48 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Menu  usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
+      <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
       <div className="mainSection text-white">
-        
+
         <Routes>
 
-        <Route exact path="/administrador/*" element={
-          <RutasProtegidas>
-            <RutasAdministrador></RutasAdministrador>
-          </RutasProtegidas>
-        }></Route>
+          <Route exact path="/administrador/*" element={
+            <RutasProtegidas>
+              <RutasAdministrador></RutasAdministrador>
+            </RutasProtegidas>
+          }></Route>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route exact path="/detalle/:id" element={<DetalleProductoInicio></DetalleProductoInicio>}></Route>
 
           <Route exact path="/login" element={
-          <Login setUsuarioLogueado={setUsuarioLogueado}>
+            <Login setUsuarioLogueado={setUsuarioLogueado}>
 
-          </Login>}>
-            
+            </Login>}>
+
           </Route>
-        
+
           <Route exact path="/sobrenosotros" element={
-          
-          <SobreNosotros>
 
-          </SobreNosotros>}></Route>
+            <SobreNosotros>
 
-<Route exact path="/login" element={
-<Login>
+            </SobreNosotros>}></Route>
 
-</Login>}>
-  
-</Route>
+          <Route exact path="/login" element={
+            <Login>
+
+            </Login>}>
+
+          </Route>
           {/* <Route path="/" element={<PagPrincipal></PagPrincipal>}></Route>
         <Route exact path="/detalleProducto/:id" element={<DetalleProducto></DetalleProducto>} ></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
         <Route path="/AcercaDe" element={<SobreNosotros></SobreNosotros>}></Route> */}
-        <Route path="*" element={<Error404></Error404>}></Route>
+          <Route path="*" element={<Error404></Error404>}></Route>
         </Routes>
         {/* <Footer usuarioLogueado={usuarioLogueado}></Footer> */}
       </div>
-      
+
       <Footer></Footer>
 
     </BrowserRouter>
