@@ -11,7 +11,7 @@ const CardProducto = ({ producto }) => {
             <Card className="m-1 zoom-on-hover">
                 <Card.Img variant="top" src={producto.imagen} className="imagenProductoInicio "/>
                 <Card.Body className="cuerpoProductoInicio">
-                    <Card.Title className="nombrePrenda">{producto.nombrePrenda}</Card.Title>
+                    <Card.Title className="nombrePrenda">{producto.nombrePrenda} - {producto.categoria}</Card.Title>
                     <Card.Text className="my-1" >
                         <span className="precioPrenda fw-bold rounded p-1">$ {producto.precio}</span>
                     </Card.Text>

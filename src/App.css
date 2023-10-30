@@ -56,7 +56,8 @@
   justify-content: space-around;
 }
 .nombrePrenda{
-  margin-bottom: 0px!important;
+  margin-bottom: 0px!important;  
+  font-size: 15px!important;
 }
 .precioPrenda{
   margin-bottom: 2px;

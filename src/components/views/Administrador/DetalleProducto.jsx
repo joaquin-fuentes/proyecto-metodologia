@@ -113,14 +113,11 @@ const DetalleProducto = () => {
                             required: 'Debe seleccionar una categoria',
                         })}>
                         <option value="">Seleccione una opcion</option>
-                        <option value="Remeras">Remeras</option>
-                        <option value="Pantalones Cortos">Pantalones Cortos</option>
-                        <option value="Pantalones Largos">Pantalones Largos</option>
-                        <option value="Conjuntos">Conjuntos</option>
-                        <option value="Zapatillas">Zapatillas</option>
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                        <option value="Ambos">Ambos</option>
+                        <option value="Niños">Niños</option>
                         <option value="Accesorios">Accesorios</option>
-                        <option value="Ropa interior">Ropa interior</option>
-                        <option value="Abrigos">Abrigos</option>
                     </Form.Select>
                     <Form.Text className="text-danger">
                         {errors.categoria?.message}
