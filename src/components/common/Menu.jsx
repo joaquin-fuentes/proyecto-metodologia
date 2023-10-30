@@ -44,7 +44,10 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                             <Nav.Link href="/contacto">Contacto</Nav.Link>
                             <Nav.Link href="/sobrenosotros">Sobre nosotros</Nav.Link>
                             {usuarioLogueado ? (
+                                <>
+                                <Nav.Link href="/administrador">Administrador</Nav.Link>
                                 <Nav.Link onClick={logout}>Cerrar Sesión</Nav.Link>
+                                </>
                             ) : (
                                 null
                             )}
