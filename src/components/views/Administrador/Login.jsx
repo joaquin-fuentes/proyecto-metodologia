@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import icono_perfil from "../assets/person.png";
-import icono_contraseña from "../assets/password.png";
+import icono_perfil from "../imagenes2/person.png";
+import icono_contraseña from "../imagenes2/password.png";
 import { login } from "../../helpers/queries"
 import Swal from "sweetalert2"
 import { useNavigate } from "react-router-dom"
