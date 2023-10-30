@@ -1,10 +1,10 @@
  import React from 'react';
  import { Carousel } from 'react-responsive-carousel';
  import 'react-responsive-carousel/lib/styles/carousel.min.css'; 
- import tienda from "../assets/Tienda.png";
- import vendedor1 from "../assets/Vendedor1.jpg"
- import vendedor2 from "../assets/Vendedor2.jpeg"
- import vendedor3 from "../assets/Vendedor3.webp"
+ import tienda from "../imagenes2/Tienda.png";
+ import vendedor1 from "../imagenes2/Vendedor1.jpg"
+ import vendedor2 from "../imagenes2/Vendedor2.jpeg"
+ import vendedor3 from "../imagenes2/Vendedor3.webp"
  
 
 
