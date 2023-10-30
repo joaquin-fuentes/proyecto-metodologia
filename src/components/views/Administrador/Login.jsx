@@ -31,7 +31,6 @@ const Login = ({setUsuarioLogueado}) => {
       password: contrasena
     };
     // Aquí puedes realizar cualquier acción que necesites con el objeto formData
-    console.log(formData);
     login(formData).then((respuesta)=>{
       if(respuesta){
         sessionStorage.setItem("usuario", JSON.stringify(respuesta));

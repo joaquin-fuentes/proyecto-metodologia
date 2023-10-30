@@ -16,10 +16,10 @@ const CardProducto = ({ producto }) => {
                         <span className="precioPrenda fw-bold rounded p-1">$ {producto.precio}</span>
                     </Card.Text>
                     <div className="contenedorBotonesPrendas">
-                        <NavLink end to={`/detalle/${producto.id}`} className={"w-100 my-1 btn btn-primary botonPrenda"} >Ver detalle</NavLink>
+                        <NavLink end to={`/detalle/${producto._id}`} className={"w-100 my-1 btn btn-primary botonPrenda"} >Ver detalle</NavLink>
                         <Link className="w-100 my-1 btn btn-success botonPrenda"
                             target="_blank"
-                            to={`https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! Estoy interesado en tu PRODUCTO: ${producto.nombrePrenda}. CODIGO: ${producto.id}`}>
+                            to={`https://api.whatsapp.com/send?phone=3816097754&text=¡Hola! Estoy interesado en tu PRODUCTO: ${producto.nombrePrenda}. CODIGO: ${producto._id}`}>
                             Ir al Whatsapp <FaWhatsapp className="icono-whatsap" />
                         </Link>
                     </div>

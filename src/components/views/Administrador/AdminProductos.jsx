@@ -1,43 +1,39 @@
+import React, { useEffect, useState } from 'react';
 import { Container, Table, Button, InputGroup, Form, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from 'react';
 import { obtenerProductos } from "../../helpers/queries";
 import Swal from "sweetalert2";
-
 import ItemProducto from "./ItemProducto"
 
 const AdminProductos = () => {
-
-  const [productos, setProductos] = useState([])
-
+  const [productos, setProductos] = useState([]);
   const [nombrePrenda, setNombrePrenda] = useState("");
-  const [id, setId] = useState(0);
-
+  const [id, setId] = useState("");
 
   useEffect(() => {
     obtenerProductos().then((respuesta) => {
       if (respuesta != null) {
-        setProductos(respuesta)
+        setProductos(respuesta);
       } else {
-        Swal.fire("Error", "No se pudo obtener los datos de la API", "error")
+        Swal.fire("Error", "No se pudo obtener los datos de la API", "error");
         // navegacion("/error404")
       }
-    })
-  }, [])
+    });
+  }, []);
+
+  const handleIdChange = (e) => {
+    const value = e.target.value;
+    setId(value);
+  };
 
   const productosFiltrados = productos.filter((producto) => {
     const nombrePrendaMatches =
       nombrePrenda === "" || producto.nombrePrenda.toLowerCase().includes(nombrePrenda.toLowerCase());
 
-    const idMatches = id === 0 || producto.id === id;
+    const idMatches = id === "" || producto._id.includes(id);
 
     return nombrePrendaMatches && idMatches;
   });
-
-  const handleIdChange = (e) => {
-    const value = parseInt(e.target.value);
-    setId(isNaN(value) ? 0 : value);
-  };
 
   return (
     <Container className="mainSection my-4">
@@ -49,23 +45,26 @@ const AdminProductos = () => {
             Agregar nuevo producto
           </Link>
         </Col>
-        <Col md="6"><InputGroup className="mb-3">
-          <InputGroup.Text id="basic-addon1">Prenda</InputGroup.Text>
-          <Form.Control
-            placeholder="Buscar por nombre de prenda"
-            value={nombrePrenda}
-            onChange={(e) => setNombrePrenda(e.target.value)}
-          />
-        </InputGroup></Col>
-        <Col md="6"><InputGroup className="mb-3">
-          <InputGroup.Text id="basic-addon1">Codigo</InputGroup.Text>
-          <Form.Control
-            type="number"
-            placeholder="Buscar por codigo de prenda"
-            value={id === 0 ? "" : id}
-            onChange={handleIdChange}
-          />
-        </InputGroup></Col>
+        <Col md="6">
+          <InputGroup className="mb-3">
+            <InputGroup.Text>Prenda</InputGroup.Text>
+            <Form.Control
+              placeholder="Buscar por nombre de prenda"
+              value={nombrePrenda}
+              onChange={(e) => setNombrePrenda(e.target.value)}
+            />
+          </InputGroup>
+        </Col>
+        <Col md="6">
+          <InputGroup className="mb-3">
+            <InputGroup.Text>Codigo</InputGroup.Text>
+            <Form.Control
+              placeholder="Buscar por codigo de prenda"
+              value={id}
+              onChange={handleIdChange}
+            />
+          </InputGroup>
+        </Col>
       </Row>
       <Table striped bordered hover responsive variant="dark" className="text-center">
         <thead>
@@ -81,11 +80,9 @@ const AdminProductos = () => {
           </tr>
         </thead>
         <tbody>
-          {
-            productosFiltrados.map((producto) => {
-              return <ItemProducto producto={producto} setProductos={setProductos} key={producto.id}></ItemProducto>;
-            })
-          }
+          {productosFiltrados.map((producto) => {
+            return <ItemProducto producto={producto} setProductos={setProductos} key={producto._id}></ItemProducto>;
+          })}
         </tbody>
       </Table>
     </Container>

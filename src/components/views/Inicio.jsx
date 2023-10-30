@@ -95,7 +95,7 @@ const Inicio = () => {
                         :
                         <Row className="alineacionProductos">
                             {productosFiltrados.map((producto) => (
-                                <CardProducto producto={producto} key={producto.id} />
+                                <CardProducto producto={producto} key={producto._id} />
                             ))}
                         </Row>
                     )}

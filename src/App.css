@@ -124,6 +124,15 @@
   width: 50px;
   height: 55px;
 }
+.contenedorTd{
+  overflow: hidden;
+}
+.tdCodigo{
+  max-width: 100px;
+  white-space: nowrap; /* Evita el salto de línea */
+  overflow: hidden; /* Oculta el texto que desborda */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos */
+}
 /* Contacto */
 
 .contac{

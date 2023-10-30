@@ -19,7 +19,7 @@ const ItemProducto = ({ producto, setProductos }) => {
             if (result.isConfirmed) {
 
                 // aqui tengo que hacer la peticion DELETE 
-                consultaBorrarProducto(producto.id).then((respuesta) => {
+                consultaBorrarProducto(producto._id).then((respuesta) => {
                     if (respuesta.status === 200) {
                         Swal.fire(
                             'Eliminado!',
@@ -38,8 +38,8 @@ const ItemProducto = ({ producto, setProductos }) => {
     }
 
     return (
-        <tr>
-            <td>{producto.id}</td>
+        <tr className="contenedorTd">
+            <td className="tdCodigo">{producto._id}</td>
             <td>{producto.nombrePrenda}</td>
             <td><div style={{ backgroundColor: producto.color, width: '100%', height: '30px' }}></div></td>
             <td>{producto.talle}</td>
@@ -49,12 +49,12 @@ const ItemProducto = ({ producto, setProductos }) => {
             <td>
               <Link
                 className="btn btn-success m-1"
-                to={`/administrador/detalle/${producto.id}`}
+                to={`/administrador/detalle/${producto._id}`}
               > Ver detalle
               </Link>
               <Link
                 className="btn btn-warning m-1"
-                to={`/administrador/editar/${producto.id}`}
+                to={`/administrador/editar/${producto._id}`}
               > Editar
               </Link>
               <Button className="m-1" variant="danger" onClick={borrarProducto}>Eliminar</Button>
