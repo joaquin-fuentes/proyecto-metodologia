@@ -139,12 +139,22 @@
       "talle": "S",
       "descripcion": "Conjunto deportivo mujer, talle s, color negro y rojo.",
       "id": 15
+    },
+    {
+      "nombrePrenda": "Remera adidas",
+      "precio": "5000",
+      "imagen": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/69b6277eccca43388484af0201209b07_9366/remera-adicolor-classics-trifolio.jpg",
+      "categoria": "Mujer",
+      "color": "#20ac16",
+      "talle": "L",
+      "descripcion": "Pantalon de algodon",
+      "id": 16
     }
   ],
   "usuarios": [
     {
       "id": 1,
-      "nombreUsuario": "admin",
+      "nombreUsuario": "Admin",
       "password": "123456"
     }
   ]
